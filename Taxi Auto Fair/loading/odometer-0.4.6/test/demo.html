@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head><link rel="stylesheet" href="../themes/odometer-theme-car.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+.odometer {
+  font-size: 45px;
+}
+</style>
+<script>
+window.odometerOptions = {
+  format: '(ddd).dd'
+};
+</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="../odometer.js"></script>
+<div class="odometer" style="position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);">1000000000</div>
+<script>
+  setTimeout(function(){
+    $('.odometer').html(9999999999);
+  }, 500);
+</script>
+<body style="background-image:url('bg.jpg');background-repeat: no-repeat;max-width:100%;height:auto;"></body>
